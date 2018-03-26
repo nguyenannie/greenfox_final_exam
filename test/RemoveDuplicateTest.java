@@ -11,27 +11,27 @@ public class RemoveDuplicateTest {
   private List<Integer> integerListDuplicated = new ArrayList<>(Arrays.asList(4,6,4,7,8,10,11,1,6,7,5,7,8));
   private List<Integer> integerListNonDuplicated = new ArrayList<>(Arrays.asList(4, 6, 7, 8, 10, 11, 1, 5));
   private List<Integer> integerListNonDuplicatedNoOrder = new ArrayList<>(Arrays.asList(1, 4, 5, 6, 7, 8, 10, 11));
-  private RemoveDuplicate removeDuplicateIntegerList = new RemoveDuplicate(integerListDuplicated);
+  private RemoveDuplicate<Integer> removeDuplicateIntegerList = new RemoveDuplicate<>(integerListDuplicated);
 
   private List<Long> longListDuplicated = new ArrayList<>(Arrays.asList(5L,7L,11L,11L,14L,48L,293L,15L,11L,28L,35L));
   private List<Long> longListNonDuplicatedNoOrder = new ArrayList<>(Arrays.asList(48L, 35L, 5L, 293L, 7L, 11L, 28L, 14L, 15L));
   private List<Long> longListNonDuplicated = new ArrayList<>(Arrays.asList(5L, 7L, 11L, 14L, 48L, 293L, 15L, 28L, 35L));
-  private RemoveDuplicate removeDuplicateLongList = new RemoveDuplicate(longListDuplicated);
+  private RemoveDuplicate<Long> removeDuplicateLongList = new RemoveDuplicate<>(longListDuplicated);
 
   private List<Float> floatListDuplicate = new ArrayList<>(Arrays.asList(15.5f, 4.7f, 6f, 9f, 88f, 9f, 5f, 15.5f));
   private List<Float> floatListNonDuplicate = new ArrayList<>(Arrays.asList(15.5f, 4.7f, 6.0f, 9.0f, 88.0f, 5.0f));
   private List<Float> floatListNonDuplicateNoOrder = new ArrayList<>(Arrays.asList(4.7f, 6.0f, 9.0f, 88.0f, 5.0f, 15.5f));
-  private RemoveDuplicate removeDuplicateFloatList = new RemoveDuplicate(floatListDuplicate);
+  private RemoveDuplicate<Float> removeDuplicateFloatList = new RemoveDuplicate<>(floatListDuplicate);
 
   private List<Double> doubleListDuplicate = new ArrayList<>(Arrays.asList(45.6, 9.7, 35.6, 9.7, 45.6, 13.4, 14.6, 13.4));
   private List<Double> doubleListNonDuplicate = new ArrayList<>(Arrays.asList(45.6, 9.7, 35.6, 13.4, 14.6));
   private List<Double> doubleListNonDuplicateNoOrder = new ArrayList<>(Arrays.asList(9.7, 13.4, 45.6, 35.6, 14.6));
-  private RemoveDuplicate removeDuplicateDoubleList = new RemoveDuplicate(doubleListDuplicate);
+  private RemoveDuplicate<Double> removeDuplicateDoubleList = new RemoveDuplicate<>(doubleListDuplicate);
 
-  private List<String> stringListDuplicate = new ArrayList<>(Arrays.asList());
-  private List<String> stringListNonDuplicate = new ArrayList<>(Arrays.asList());
-  private List<String> stringListNonDuplicateNoOrder = new ArrayList<>(Arrays.asList());
-  private RemoveDuplicate removeDuplicateStringList = new RemoveDuplicate(stringListDuplicate);
+  private List<String> stringListDuplicate = new ArrayList<>(Arrays.asList("rubble", "annie", "krisz", "annie", "sonic", "rubble"));
+  private List<String> stringListNonDuplicate = new ArrayList<>(Arrays.asList("rubble", "annie", "krisz", "sonic"));
+  private List<String> stringListNonDuplicateNoOrder = new ArrayList<>(Arrays.asList("krisz", "sonic", "annie", "rubble"));
+  private RemoveDuplicate<String> removeDuplicateStringList = new RemoveDuplicate<>(stringListDuplicate);
 
 
   @Test

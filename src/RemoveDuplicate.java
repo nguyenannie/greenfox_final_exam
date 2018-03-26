@@ -11,7 +11,6 @@ public class RemoveDuplicate<T> {
     this.duplicatedList = duplicatedList;
   }
 
-  //do not keep original order
   public List<T> removeDuplicateDoNotKeepOriginalOrder() {
     if (duplicatedList != null) {
       return new ArrayList<>(new HashSet<>(duplicatedList));
@@ -19,7 +18,6 @@ public class RemoveDuplicate<T> {
     return null;
   }
 
-  //keep original order using functional approach
   public List<T> removeDuplicateKeepOriginalOrder() {
     if (duplicatedList != null) {
       return duplicatedList.stream().distinct().collect(Collectors.toList());
@@ -27,7 +25,6 @@ public class RemoveDuplicate<T> {
     return null;
   }
 
-  //keep original order using for loop
   public List<T> removeDuplicateUsingForLoop() {
     if (duplicatedList != null) {
       List<T> nonDuplicateList = new ArrayList<>();

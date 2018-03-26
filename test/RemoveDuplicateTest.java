@@ -52,13 +52,12 @@ public class RemoveDuplicateTest {
   @Test
   public void removeDuplicateEmptyList_ShouldReturnEmptyList_Test() {
     List<Integer> empty = new ArrayList<>();
-    assertEquals(new ArrayList<Integer>(), new RemoveDuplicate(empty).removeDuplicateDoNotKeepOriginalOrder());
+    assertEquals(new ArrayList<Integer>(), new RemoveDuplicate<>(empty).removeDuplicateDoNotKeepOriginalOrder());
   }
 
   @Test
   public void removeDuplicateIntegerNullListTest() {
-    List<Integer> nullList = null;
-    assertEquals(null, new RemoveDuplicate(nullList).removeDuplicateDoNotKeepOriginalOrder());
+    assertEquals(null, new RemoveDuplicate<>(null).removeDuplicateDoNotKeepOriginalOrder());
   }
 
   @Test

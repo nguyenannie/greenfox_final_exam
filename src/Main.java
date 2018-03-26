@@ -14,27 +14,27 @@ public class Main {
     List<String> stringList = new ArrayList<>(Arrays.asList("rubble", "annie", "krisz", "annie", "sonic", "rubble"));
 
     RemoveDuplicate removeDuplicateIntegerList = new RemoveDuplicate(integerList);
-    System.out.println(removeDuplicateIntegerList.removeDuplicate());
+    System.out.println(removeDuplicateIntegerList.removeDuplicateDoNotKeepOriginalOrder());
     System.out.println(removeDuplicateIntegerList.removeDuplicateKeepOriginalOrder());
     System.out.println(removeDuplicateIntegerList.removeDuplicateUsingForLoop());
 
     RemoveDuplicate removeDuplicateLongList = new RemoveDuplicate(longList);
-    System.out.println(removeDuplicateLongList.removeDuplicate());
+    System.out.println(removeDuplicateLongList.removeDuplicateDoNotKeepOriginalOrder());
     System.out.println(removeDuplicateLongList.removeDuplicateKeepOriginalOrder());
     System.out.println(removeDuplicateLongList.removeDuplicateUsingForLoop());
 
     RemoveDuplicate removeDuplicateFloatList = new RemoveDuplicate(floatList);
-    System.out.println(removeDuplicateFloatList.removeDuplicate());
+    System.out.println(removeDuplicateFloatList.removeDuplicateDoNotKeepOriginalOrder());
     System.out.println(removeDuplicateFloatList.removeDuplicateUsingForLoop());
     System.out.println(removeDuplicateFloatList.removeDuplicateKeepOriginalOrder());
 
     RemoveDuplicate removeDuplicateDoubleList = new RemoveDuplicate(doubleList);
-    System.out.println(removeDuplicateDoubleList.removeDuplicate());
+    System.out.println(removeDuplicateDoubleList.removeDuplicateDoNotKeepOriginalOrder());
     System.out.println(removeDuplicateDoubleList.removeDuplicateKeepOriginalOrder());
     System.out.println(removeDuplicateDoubleList.removeDuplicateUsingForLoop());
 
     RemoveDuplicate removeDuplicateStringList = new RemoveDuplicate(stringList);
-    System.out.println(removeDuplicateStringList.removeDuplicate());
+    System.out.println(removeDuplicateStringList.removeDuplicateDoNotKeepOriginalOrder());
     System.out.println(removeDuplicateStringList.removeDuplicateUsingForLoop());
     System.out.println(removeDuplicateStringList.removeDuplicateKeepOriginalOrder());
   }

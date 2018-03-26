@@ -12,7 +12,7 @@ public class RemoveDuplicate<T> {
   }
 
   //do not keep original order
-  public List<T> removeDuplicate() {
+  public List<T> removeDuplicateDoNotKeepOriginalOrder() {
     if (duplicatedList != null) {
       return new ArrayList<>(new HashSet<>(duplicatedList));
     }

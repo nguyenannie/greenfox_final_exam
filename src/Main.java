@@ -13,48 +13,30 @@ public class Main {
     List<Double> doubleList = new ArrayList<>(Arrays.asList(45.6, 9.7, 35.6, 9.7, 45.6, 13.4, 14.6, 13.4));
     List<String> stringList = new ArrayList<>(Arrays.asList("rubble", "annie", "krisz", "annie", "sonic", "rubble"));
 
-    System.out.println(removeDuplicate(integerList));
-    System.out.println(removeDuplicateKeepOriginalOrder(integerList));
-    System.out.println(removeDuplicateUsingForLoop(integerList));
+    RemoveDuplicate removeDuplicateIntegerList = new RemoveDuplicate(integerList);
+    System.out.println(removeDuplicateIntegerList.removeDuplicate());
+    System.out.println(removeDuplicateIntegerList.removeDuplicateKeepOriginalOrder());
+    System.out.println(removeDuplicateIntegerList.removeDuplicateUsingForLoop());
 
-    System.out.println(removeDuplicate(longList));
-    System.out.println(removeDuplicateKeepOriginalOrder(longList));
-    System.out.println(removeDuplicateUsingForLoop(longList));
+    RemoveDuplicate removeDuplicateLongList = new RemoveDuplicate(longList);
+    System.out.println(removeDuplicateLongList.removeDuplicate());
+    System.out.println(removeDuplicateLongList.removeDuplicateKeepOriginalOrder());
+    System.out.println(removeDuplicateLongList.removeDuplicateUsingForLoop());
 
-    System.out.println(removeDuplicate(floatList));
-    System.out.println(removeDuplicateKeepOriginalOrder(floatList));
-    System.out.println(removeDuplicateUsingForLoop(floatList));
+    RemoveDuplicate removeDuplicateFloatList = new RemoveDuplicate(floatList);
+    System.out.println(removeDuplicateFloatList.removeDuplicate());
+    System.out.println(removeDuplicateFloatList.removeDuplicateUsingForLoop());
+    System.out.println(removeDuplicateFloatList.removeDuplicateKeepOriginalOrder());
 
-    System.out.println(removeDuplicate(doubleList));
-    System.out.println(removeDuplicateKeepOriginalOrder(doubleList));
-    System.out.println(removeDuplicateUsingForLoop(doubleList));
+    RemoveDuplicate removeDuplicateDoubleList = new RemoveDuplicate(doubleList);
+    System.out.println(removeDuplicateDoubleList.removeDuplicate());
+    System.out.println(removeDuplicateDoubleList.removeDuplicateKeepOriginalOrder());
+    System.out.println(removeDuplicateDoubleList.removeDuplicateUsingForLoop());
 
-    System.out.println(removeDuplicate(stringList));
-    System.out.println(removeDuplicateKeepOriginalOrder(stringList));
-    System.out.println(removeDuplicateUsingForLoop(stringList));
+    RemoveDuplicate removeDuplicateStringList = new RemoveDuplicate(stringList);
+    System.out.println(removeDuplicateStringList.removeDuplicate());
+    System.out.println(removeDuplicateStringList.removeDuplicateUsingForLoop());
+    System.out.println(removeDuplicateStringList.removeDuplicateKeepOriginalOrder());
   }
 
-  //do not keep original order
-  private static <T> List<T> removeDuplicate(List<T> duplicateList) {
-    return new ArrayList<>(new HashSet<>(duplicateList));
-  }
-
-  //keep original order using functional approach
-  private static <T> List<T> removeDuplicateKeepOriginalOrder(List<T> duplicateList) {
-    return duplicateList.stream().distinct().collect(Collectors.toList());
-  }
-
-  //keep original order using for loop
-  private static <T> List<T> removeDuplicateUsingForLoop(List<T> duplicateList) {
-    List<T> nonDuplicateList = new ArrayList<>();
-
-    for (T aDuplicateList : duplicateList) {
-      if (!nonDuplicateList.contains(aDuplicateList)) {
-        nonDuplicateList.add(aDuplicateList);
-      }
-    }
-
-    return nonDuplicateList;
-  }
-  
 }
